@@ -2,10 +2,13 @@ import ItemList from "../components/item/ItemsList";
 
 const Dashboard = (props) => {
   return (
-    <>
-      <h1>User Dashboard</h1>
-      <ItemList />
-    </>
+    <section className="Form my-4 mx-5">
+      <div className="container">
+        <div className="row g-0">
+          <ItemList />
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -4,6 +4,9 @@ import Layout from "./components/layout/Layout";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import AddItemPage from "./pages/AddItemPage";
+import MainNavigation from "./components/layout/MainNavigation";
+
+import "./App.css";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -12,7 +15,9 @@ function App() {
     <div className="App">
       <Layout>
         <Routes>
-          <Route path="*" element={<Login />}></Route>
+          <Route path="/" element={<Login />}></Route>
+          <Route path="/dashboard" element={<Dashboard />} exact></Route>
+
           {!isAuthenticated && <Route path="*" element={<Login />}></Route>}
           {isAuthenticated && (
             <Route path="/" element={<Dashboard />} exact></Route>

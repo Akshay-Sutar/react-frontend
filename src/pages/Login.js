@@ -17,6 +17,10 @@ const Login = () => {
     const password = passwordRef.current.value.trim();
     const body = { username, password };
 
+    const userData = { userId: 123, username: "Akshay Sutar" };
+    dispatch(authActions.login(userData));
+    navigate("/dashboard");
+
     // axios
     //   .post(`http://localhost:4000/login`, body, {
     //     withCredentials: true,
@@ -37,7 +41,7 @@ const Login = () => {
   return (
     <section className="Form my-4 mx-5">
       <div className="container">
-        <div className="row g-0">
+        <div className="row row-white g-0">
           <div className="col-lg-5">
             <img
               src="https://cdn.pixabay.com/photo/2015/07/02/05/28/portrait-828395_960_720.jpg"
@@ -71,19 +75,23 @@ const Login = () => {
               </div>
               <div className="form-row">
                 <div className="col-lg-7">
-                  <button className="my-button mt-3 mb-5" onClick={loginHandler}>
+                  <button
+                    className="my-button mt-3 mb-5"
+                    onClick={loginHandler}
+                  >
                     Login
                   </button>
                 </div>
               </div>
               <div className="form-row">
-                <div className="col-lg-7">
-                <Link to="/register">Forgot password</Link>
+                <div align="center" className="col-lg-7">
+                  <Link to="/register">Forgot password</Link>
                 </div>
               </div>
               <div className="form-row">
-                <div className="col-lg-7">
-                Don't have an account? <Link to="/register">Register here</Link>
+                <div align="center" className="col-lg-7 mb-5">
+                  Don't have an account?{" "}
+                  <Link to="/register">Register here</Link>
                 </div>
               </div>
             </form>
