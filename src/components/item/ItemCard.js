@@ -3,7 +3,7 @@ import "./ItemCard.css";
 
 export default function ItemCard({ product }) {
   return (
-    <div className="col-md-4 p-2">
+    <div className="item-card col-md-4 p-2">
       <div className="card mt-3">
         <div className="product-1 align-items-center p-2 text-center">
           <img
