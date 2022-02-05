@@ -17,17 +17,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/dashboard" element={<Dashboard />} exact></Route>
-
-          {!isAuthenticated && <Route path="*" element={<Login />}></Route>}
-          {isAuthenticated && (
-            <Route path="/" element={<Dashboard />} exact></Route>
-          )}
-          {isAuthenticated && (
-            <Route path="/dashboard" element={<Dashboard />}></Route>
-          )}
-          {isAuthenticated && (
-            <Route path="/addItem" element={<AddItemPage />}></Route>
-          )}
         </Routes>
       </Layout>
     </div>
