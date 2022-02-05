@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ItemCard from "./ItemCard";
 
 export default function ItemList() {
   const url = "https://fakestoreapi.com/products/";
@@ -7,8 +8,15 @@ export default function ItemList() {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((json) => console.log(json));
-  });
+      .then((json) => setProducts(json));
+  }, []);
 
-  return <div></div>;
+  return (
+    <>
+      {!products.length && <p>Loading...</p>}
+      {products.map((product) => (
+        <ItemCard key={product.id} product={product} />
+      ))}
+    </>
+  );
 }

@@ -1,0 +1,41 @@
+.card {
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  transition: transform 0.3s;
+}
+.product-category {
+  color: black;
+  font-size: 15px;
+}
+.info {
+  line-height: 17px;
+}
+
+.star {
+  color: gold;
+}
+
+.cost span {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.add-to-cart {
+  background-color: #ff7a5a;
+}
+
+.add-to-cart:hover {
+  opacity: 0.8;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+}

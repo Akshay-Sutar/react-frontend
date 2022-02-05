@@ -1,4 +1,4 @@
-import ItemList from "../components/item/ItemsList";
+import ItemList from "../components/item/ItemList";
 
 const Dashboard = (props) => {
   return (

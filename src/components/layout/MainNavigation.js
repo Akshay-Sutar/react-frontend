@@ -37,11 +37,19 @@ const MainNavigation = (props) => {
               </a>
             </li>
           </ul>
-          <span className="navbar-text">
-            <a>
-              <i className="fa fa-men"></i>
-            </a>
-          </span>
+          <form className="d-flex">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item m-2">
+                <span className="fa fa-user"></span>
+              </li>
+              <li className="nav-item m-2">
+                <span className="fa fa-heart"></span>
+              </li>
+              <li className="nav-item m-2">
+                <span className="fa fa-shopping-cart"></span>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
     </nav>
